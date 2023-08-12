@@ -2,7 +2,8 @@ name: Renovate
 
 on:
   schedule:
-    - cron: 0 14 * * 0 # Sunday 2PM UTC = Monday 12AM AEST
+    - cron: "*/15 * * * *" # every 15 minutes
+
   workflow_dispatch:
     inputs:
       logLevel:
