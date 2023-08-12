@@ -2,7 +2,6 @@
   "configMigration": true,
   "dependencyDashboard": true,
   "labels": ["renovate"],
-  "minimumReleaseAge": "1 week",
   "platformCommit": true,
   "postUpdateOptions": ["npmDedupe"],
   "reviewers": ["team:renovate-reviewers"],
@@ -19,7 +18,9 @@
       "matchManagers": ["github-actions"],
       "matchUpdateTypes": ["major"],
 
-      "addLabels": ["major"]
+      "addLabels": ["major"],
+
+      "minimumReleaseAge": "1 week"
     },
     {
       "description": "GitHub Actions (non-major)",
@@ -47,7 +48,9 @@
         "optionalDependencies"
       ],
 
-      "addLabels": ["non-dev"]
+      "addLabels": ["non-dev"],
+
+      "minimumReleaseAge": "1 week"
     },
     {
       "description": "NPM (dev)",
