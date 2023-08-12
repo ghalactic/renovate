@@ -1,0 +1,26 @@
+name: Renovate
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: 0 14 * * 0 # Sunday 2PM UTC = Monday 12AM AEST
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Obtain Renovate app token
+        id: token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: ${{ secrets.RENOVATE_APP_ID }}
+          private_key: ${{ secrets.RENOVATE_APP_PK }}
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Renovate
+        uses: renovatebot/github-action@v39.0.1
+        with:
+          token: ${{ steps.token.outputs.token }}
