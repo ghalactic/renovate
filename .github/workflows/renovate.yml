@@ -27,7 +27,7 @@ jobs:
     name: Renovate
 
     steps:
-      - name: Obtain Renovate app token
+      - name: Obtain token
         id: token
         uses: tibdex/github-app-token@v1
         with:
