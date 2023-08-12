@@ -1,5 +1,5 @@
 {
-  "allowedPostUpgradeCommands": ["^make "],
+  "allowedPostUpgradeCommands": ["^npm run renovate-post-update$"],
   "autodiscover": true,
   "gitAuthor": "Ghalactic Renovate <142067417+ghalactic-renovate[bot]@users.noreply.github.com>",
   "onboarding": false,
