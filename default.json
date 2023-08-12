@@ -4,6 +4,7 @@
   "minimumReleaseAge": "1 week",
   "platformCommit": true,
   "postUpdateOptions": ["npmDedupe"],
+  "reviewers": ["team:renovate-reviewers"],
 
   "packageRules": [
     {
