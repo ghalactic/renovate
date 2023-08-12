@@ -61,6 +61,13 @@
 
       "automerge": true,
       "automergeType": "branch"
+    },
+
+    {
+      "description": "Terraform",
+      "matchManagers": ["terraform"],
+
+      "addLabels": ["terraform"]
     }
   ]
 }
