@@ -6,11 +6,17 @@ on:
 
   workflow_dispatch:
     inputs:
+      dryRun:
+        description: 'Dry run'
+        required: true
+        type: boolean
+        default: false
+
       logLevel:
         description: 'Log level'
         required: true
-        default: 'info'
         type: choice
+        default: 'info'
         options:
         - info
         - debug
@@ -36,4 +42,5 @@ jobs:
           configurationFile: .github/renovate.json5
           token: ${{ steps.token.outputs.token }}
         env:
+          RENOVATE_DRY_RUN: ${{ github.event.inputs.dryRun && 'full' || '' }}
           LOG_LEVEL: ${{ github.event.inputs.logLevel || 'info' }}
