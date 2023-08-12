@@ -7,19 +7,19 @@ on:
   workflow_dispatch:
     inputs:
       dryRun:
-        description: 'Dry run'
+        description: "Dry run"
         required: true
         type: boolean
         default: false
 
       logLevel:
-        description: 'Log level'
+        description: "Log level"
         required: true
         type: choice
-        default: 'info'
+        default: "info"
         options:
-        - info
-        - debug
+          - info
+          - debug
 
 jobs:
   renovate:
