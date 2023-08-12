@@ -1,9 +1,18 @@
 name: Renovate
 
 on:
-  workflow_dispatch: {}
   schedule:
     - cron: 0 14 * * 0 # Sunday 2PM UTC = Monday 12AM AEST
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'info'
+        type: choice
+        options:
+        - info
+        - debug
 
 jobs:
   renovate:
@@ -24,3 +33,5 @@ jobs:
         uses: renovatebot/github-action@v39.0.1
         with:
           token: ${{ steps.token.outputs.token }}
+        env:
+          LOG_LEVEL: ${{ github.event.inputs.logLevel || 'info' }}
