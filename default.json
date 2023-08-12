@@ -24,10 +24,7 @@
       "matchManagers": ["github-actions"],
       "matchUpdateTypes": ["minor", "patch"],
 
-      "addLabels": ["non-major"],
-
-      "automerge": true,
-      "automergeType": "branch"
+      "addLabels": ["non-major"]
     },
 
     {
@@ -52,10 +49,7 @@
       "matchManagers": ["npm"],
       "matchDepTypes": ["devDependencies"],
 
-      "addLabels": ["dev"],
-
-      "automerge": true,
-      "automergeType": "branch"
+      "addLabels": ["dev"]
     }
   ]
 }
