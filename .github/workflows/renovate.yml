@@ -24,6 +24,7 @@ on:
 jobs:
   renovate:
     runs-on: ubuntu-latest
+    name: Renovate
 
     steps:
       - name: Obtain Renovate app token
