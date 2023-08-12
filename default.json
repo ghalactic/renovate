@@ -1,0 +1,61 @@
+{
+  "configMigration": true,
+  "labels": ["renovate"],
+  "minimumReleaseAge": "1 week",
+  "platformCommit": true,
+  "postUpdateOptions": ["npmDedupe"],
+
+  "packageRules": [
+    {
+      "description": "GitHub Actions",
+      "matchManagers": ["github-actions"],
+
+      "addLabels": ["github-actions"]
+    },
+    {
+      "description": "GitHub Actions (major)",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["major"],
+
+      "addLabels": ["major"]
+    },
+    {
+      "description": "GitHub Actions (non-major)",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch"],
+
+      "addLabels": ["non-major"],
+
+      "automerge": true,
+      "automergeType": "branch"
+    },
+
+    {
+      "description": "NPM",
+      "matchManagers": ["npm"],
+
+      "addLabels": ["npm"]
+    },
+    {
+      "description": "NPM (non-dev)",
+      "matchManagers": ["npm"],
+      "matchDepTypes": [
+        "dependencies",
+        "peerDependencies",
+        "optionalDependencies"
+      ],
+
+      "addLabels": ["non-dev"]
+    },
+    {
+      "description": "NPM (dev)",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["devDependencies"],
+
+      "addLabels": ["dev"],
+
+      "automerge": true,
+      "automergeType": "branch"
+    }
+  ]
+}
