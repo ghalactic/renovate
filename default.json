@@ -1,5 +1,6 @@
 {
   "configMigration": true,
+  "dependencyDashboard": true,
   "labels": ["renovate"],
   "minimumReleaseAge": "1 week",
   "platformCommit": true,
