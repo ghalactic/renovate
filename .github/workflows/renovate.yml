@@ -2,24 +2,21 @@ name: Renovate
 
 on:
   schedule:
-    - cron: "0 * * * *" # every hour
+    - cron: 0 * * * * # every hour
 
   workflow_dispatch:
     inputs:
-      dryRun:
-        description: "Dry run"
+      debug:
+        description: Debug logging
         required: true
         type: boolean
         default: false
 
-      logLevel:
-        description: "Log level"
+      dryRun:
+        description: Dry run
         required: true
-        type: choice
-        default: "info"
-        options:
-          - info
-          - debug
+        type: boolean
+        default: false
 
 jobs:
   renovate:
@@ -43,5 +40,5 @@ jobs:
           configurationFile: .github/renovate.json
           token: ${{ steps.token.outputs.token }}
         env:
+          LOG_LEVEL: ${{ github.event.inputs.debug == 'true' && 'debug' || '' }}
           RENOVATE_DRY_RUN: ${{ github.event.inputs.dryRun == 'true' && 'full' || '' }}
-          LOG_LEVEL: ${{ github.event.inputs.logLevel || 'info' }}
