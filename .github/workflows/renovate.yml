@@ -40,5 +40,5 @@ jobs:
           configurationFile: .github/renovate.json
           token: ${{ steps.token.outputs.token }}
         env:
-          LOG_LEVEL: ${{ github.event.inputs.debug == 'true' && 'debug' || '' }}
+          LOG_LEVEL: ${{ github.event.inputs.debug == 'true' && 'debug' || 'info' }}
           RENOVATE_DRY_RUN: ${{ github.event.inputs.dryRun == 'true' && 'full' || '' }}
