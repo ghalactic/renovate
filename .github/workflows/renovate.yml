@@ -2,7 +2,9 @@ name: Renovate
 
 on:
   schedule:
-    - cron: 0 * * * * # every hour
+    # random-ish time past the hour
+    # the intent here is to avoid GHA busy times
+    - cron: 52 * * * *
 
   workflow_dispatch:
     inputs:
