@@ -12,6 +12,7 @@
 
   "configMigration": true,
   "labels": ["renovate"],
+  "pinDigests": false,
   "platformCommit": true,
   "postUpdateOptions": ["npmDedupe"],
   "reviewers": ["team:renovate-reviewers"],
