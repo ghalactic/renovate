@@ -34,7 +34,7 @@ jobs:
           private_key: ${{ secrets.RENOVATE_APP_PK }}
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Renovate
         uses: renovatebot/github-action@v39.0.5
