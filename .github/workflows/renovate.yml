@@ -21,7 +21,7 @@ on:
         default: false
 
       repositoryFilter:
-        description: Repository filter
+        description: Repository filter (regex or glob, comma-separated)
         required: false
         type: string
         default: ""
