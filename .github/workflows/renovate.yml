@@ -20,6 +20,12 @@ on:
         type: boolean
         default: false
 
+      repositoryFilter:
+        description: Repository filter
+        required: false
+        type: string
+        default: ""
+
 jobs:
   renovate:
     runs-on: ubuntu-latest
@@ -43,4 +49,5 @@ jobs:
           token: ${{ steps.token.outputs.token }}
         env:
           LOG_LEVEL: ${{ github.event.inputs.debug == 'true' && 'debug' || 'info' }}
+          RENOVATE_AUTODISCOVER_FILTER: ${{ github.event.inputs.repositoryFilter || '' }}
           RENOVATE_DRY_RUN: ${{ github.event.inputs.dryRun == 'true' && 'full' || '' }}
