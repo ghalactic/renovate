@@ -16,6 +16,7 @@
   "platformCommit": true,
   "postUpdateOptions": ["npmDedupe"],
   "reviewers": ["team:renovate-reviewers"],
+  "transitiveRemediation": true,
 
   "packageRules": [
     {
