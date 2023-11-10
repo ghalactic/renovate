@@ -1,7 +1,7 @@
 {
   "extends": ["github>ghalactic/renovate"],
 
-  "allowedPostUpgradeCommands": ["^npm run renovate-post-upgrade$"],
+  "allowedPostUpgradeCommands": ["^make regenerate$"],
   "autodiscover": true,
   "gitAuthor": "Ghalactic Renovate <142067417+ghalactic-renovate[bot]@users.noreply.github.com>",
   "onboarding": false,
