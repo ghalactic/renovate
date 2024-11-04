@@ -46,8 +46,10 @@ jobs:
         uses: renovatebot/github-action@v40.3.5
         with:
           configurationFile: .github/renovate.runner.json
+          env-regex: '^(?:RENOVATE_\w+|LOG_LEVEL|GITHUB_COM_TOKEN|NODE_OPTIONS|(?:HTTPS?|NO)_PROXY|(?:https?|no)_proxy|PUPPETEER_\w+)$'
           token: ${{ steps.token.outputs.token }}
         env:
           LOG_LEVEL: ${{ github.event.inputs.debug == 'true' && 'debug' || 'info' }}
+          PUPPETEER_SKIP_DOWNLOAD: true
           RENOVATE_AUTODISCOVER_FILTER: ${{ github.event.inputs.repositoryFilter || '' }}
           RENOVATE_DRY_RUN: ${{ github.event.inputs.dryRun == 'true' && 'full' || '' }}
