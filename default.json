@@ -16,7 +16,7 @@
   "gitAuthor": "Ghalactic Renovate <142067417+ghalactic-renovate[bot]@users.noreply.github.com>",
   "labels": ["renovate"],
   "pinDigests": false,
-  "platformCommit": true,
+  "platformCommit": "enabled",
   "postUpdateOptions": ["npmDedupe"],
   "reviewers": ["team:renovate-reviewers"],
 
