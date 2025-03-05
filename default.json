@@ -81,7 +81,7 @@
     {
       "description": "Node.js (Use latest version available under GitHub actions/runner)",
       "matchPackageNames": ["node"],
-      "matchNewValue": "/^(?!20\\.)./",
+      "matchNewValue": "!20.*",
 
       "enabled": false
     },
