@@ -75,15 +75,9 @@
       "description": "Node.js",
       "matchPackageNames": ["node"],
 
+      "allowedVersions": "^20",
       "groupName": "Node.js",
       "minimumReleaseAge": "1 week"
-    },
-    {
-      "description": "Node.js (Use latest version available under GitHub actions/runner)",
-      "matchPackageNames": ["node"],
-      "matchNewValue": "!20.*",
-
-      "enabled": false
     },
 
     {
