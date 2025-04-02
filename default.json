@@ -108,6 +108,27 @@
 
       "automerge": true
     },
+    {
+      "description": "NPM (trusted)",
+      "matchManagers": ["npm"],
+      "matchPackageNames": [
+        "@eslint/*",
+        "@octokit/*",
+        "@types/*",
+        "@vitest/*",
+        "esbuild",
+        "eslint",
+        "octokit",
+        "prettier",
+        "typescript",
+        "vitest"
+      ],
+
+      "addLabels": ["trusted"],
+
+      "automerge": true,
+      "automergeType": "branch"
+    },
 
     {
       "description": "Terraform",
