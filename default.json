@@ -75,7 +75,7 @@
       "description": "Node.js",
       "matchPackageNames": ["node"],
 
-      "allowedVersions": "^20",
+      "allowedVersions": "^24",
       "groupName": "Node.js",
       "minimumReleaseAge": "1 week"
     },
