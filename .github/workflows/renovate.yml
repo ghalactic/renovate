@@ -32,13 +32,6 @@ jobs:
     name: Renovate
 
     steps:
-      - name: Obtain token
-        id: token
-        uses: tibdex/github-app-token@v2
-        with:
-          app_id: ${{ secrets.RENOVATE_APP_ID }}
-          private_key: ${{ secrets.RENOVATE_APP_PK }}
-
       - name: Checkout
         uses: actions/checkout@v6
 
@@ -46,7 +39,7 @@ jobs:
         uses: renovatebot/github-action@v46.1.13
         with:
           configurationFile: .github/renovate.runner.json
-          token: ${{ steps.token.outputs.token }}
+          token: ${{ secrets.RENOVATE_TOKEN }}
         env:
           LOG_LEVEL: ${{ github.event.inputs.debug == 'true' && 'debug' || 'info' }}
           RENOVATE_AUTODISCOVER_FILTER: ${{ github.event.inputs.repositoryFilter || '' }}
