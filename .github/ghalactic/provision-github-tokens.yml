@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://ghalactic.github.io/provision-github-tokens/schema/requester.v1.schema.json
+
+tokens:
+  renovate:
+    shared: true
+    as: renovate
+    account: ghalactic
+    repos: all
+    permissions:
+      administration: read
+      checks: write
+      contents: write
+      issues: write
+      members: read
+      metadata: read
+      pull_requests: write
+      statuses: write
+      vulnerability_alerts: read
+      workflows: write
+
+provision:
+  secrets:
+    RENOVATE_TOKEN:
+      token: renovate
+      github:
+        repo:
+          actions: true
