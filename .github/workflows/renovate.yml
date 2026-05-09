@@ -4,6 +4,7 @@ on:
   schedule:
     # random-ish time past the hour
     # the intent here is to avoid GHA busy times
+    - cron: 24 * * * *
     - cron: 54 * * * *
 
   workflow_dispatch:
