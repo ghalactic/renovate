@@ -12,7 +12,7 @@
 [dependency dashboards]:
   https://github.com/issues?q=is%3Aissue+is%3Aopen+org%3Aghalactic+author%3Aapp%2Fghalactic-renovate+%22Dependency+Dashboard%22+sort%3Aupdated-desc
 [workflow dashboard]:
-  https://ghalactic.grafana.net/public-dashboards/8ed6d33cc1de4e22bc19563df0d4131e
+  https://ghalactic.grafana.net/public-dashboards/780b50e8dbd642ea96fbdc00eaddb53c
 
 This repo houses the self-hosted [Renovate] workflow that keeps dependencies up
 to date.
