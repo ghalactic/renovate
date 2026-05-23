@@ -2,6 +2,9 @@ name: Renovate
 run-name: Renovate
 
 on:
+  repository_dispatch:
+    types: [maintainDependencies]
+
   schedule:
     # random-ish time past the hour
     # the intent here is to avoid GHA busy times
