@@ -21,6 +21,22 @@
   "reviewers": ["team:renovate-reviewers"],
   "stopUpdatingLabel": "blocked",
 
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Vale version in the Vale GitHub Action",
+      "managerFilePatterns": ["/^\\.github/workflows/[^/]+\\.ya?ml$/"],
+      "matchStrings": [
+        "uses: vale-cli/vale-action@[^\\n]+\\n\\s+with:\\n(?:\\s+(?:[A-Za-z0-9_-]+:[^\\n]*|#[^\\n]*)\\n)*?\\s+version: [\"']?(?<currentValue>\\d[^\"'\\s#]*)[\"']?"
+      ],
+
+      "depNameTemplate": "vale",
+      "packageNameTemplate": "vale-cli/vale",
+      "datasourceTemplate": "github-tags",
+      "extractVersionTemplate": "^v?(?<version>.+)"
+    }
+  ],
+
   "packageRules": [
     {
       "description": "Allow unstable updates to 0.x versions, so long as they are not SemVer pre-release versions",
