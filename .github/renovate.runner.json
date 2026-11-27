@@ -1,7 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-global-schema.json",
-  "extends": ["github>ghalactic/renovate"],
-
   "allowedCommands": ["^(make regenerate|mise run regenerate)$"],
   "autodiscover": true,
   "onboarding": false,
